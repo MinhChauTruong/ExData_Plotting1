@@ -15,7 +15,7 @@ png("plot4.png", width=480, height=480)
 par(mfrow = c(2,2), mar = c(4,4,2,1), oma = c(0,0,2,0))
 with(pdata, plot(date_time, Global_active_power, type = "l", xlab = "", 
 	ylab = "Global active power (kilowatts)"))
-with(pdata, plot(date_time, Voltage, type = "l", xlab = "", 
+with(pdata, plot(date_time, Voltage, type = "l", xlab = "datetime", 
 	ylab = "Voltage"))
 with(pdata, plot(date_time, Sub_metering_1, col = "black", 
                  type = "l", xlab = "", ylab = "Energy sub metering"))
@@ -27,6 +27,6 @@ legend("topright"
        , col=c("black","red","blue")
        , c("Sub_metering_1  ","Sub_metering_2  ", "Sub_metering_3  ")
        ,lty=c(1,1), lwd=c(1,1))
-with(pdata, plot(date_time, Global_reactive_power, type = "l", xlab = "", 
+with(pdata, plot(date_time, Global_reactive_power, type = "l", xlab = "datetime", 
 	ylab = "Global_reactive_power"))
 dev.off()
